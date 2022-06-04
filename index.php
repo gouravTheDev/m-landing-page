@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Magic Moments Admin</title>
+    <title>Magic Moments Photography</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="mdi/css/materialdesignicons.min.css">
 
