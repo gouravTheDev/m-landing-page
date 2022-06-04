@@ -50,9 +50,6 @@
 <body>
     <div class="container pt-0 mt-0">
         <div class="row mt-4">
-            {{-- <div class="col-8 mx-auto text-center mb-0 pb-0">
-                <img src="/images/landing.gif" alt="" style="width: 40%; height: 80%">
-            </div> --}}
             <div class="col-md-12 col-sm-12 mt-4 pt-4 text-center">
                 <h1 class="text-center text-white main-heading animate__animated animate__backInUp animation">Coming
                     Soon!</h1>
@@ -61,7 +58,6 @@
                 <a href="/" class="text-white mt-4">Go to home</a>
             </div>
         </div>
-        {{-- <h1 class="animate__animated animate__backInLeft animation">An animated element</h1> --}}
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
