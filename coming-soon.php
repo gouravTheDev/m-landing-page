@@ -55,7 +55,7 @@
                     Soon!</h1>
                 <h3 class="text-white text-center sub-heading animate__animated animate__backInDown animation mb-4">Our
                     our tech team is working to launch on 17th July 2022</h3>
-                <a href="/" class="text-white mt-4">Go to home</a>
+                <a href="/" class="text-white mt-4 animate__animated animate__backInDown animation">Go to home</a>
             </div>
         </div>
 
