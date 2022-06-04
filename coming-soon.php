@@ -50,12 +50,12 @@
 <body>
     <div class="container pt-0 mt-0">
         <div class="row mt-4">
-            <div class="col-md-12 col-sm-12 mt-4 pt-4 text-center">
-                <h1 class="text-center text-white main-heading animate__animated animate__backInUp animation">Coming
+            <div class="col-md-12 col-sm-12 mt-4 pt-4 text-center animate__backInDown animation">
+                <h1 class="text-center text-white main-heading">Coming
                     Soon!</h1>
-                <h3 class="text-white text-center sub-heading animate__animated animate__backInDown animation mb-4">Our
+                <h3 class="text-white text-center sub-heading mb-4">Our
                     our tech team is working to launch on 17th July 2022</h3>
-                <a href="/" class="text-white mt-4 animate__animated animate__backInDown animation">Go to home</a>
+                <a href="/" class="text-white mt-4">Go to home</a>
             </div>
         </div>
 
