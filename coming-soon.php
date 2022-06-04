@@ -50,7 +50,7 @@
 <body>
     <div class="container pt-0 mt-0">
         <div class="row mt-4">
-            <div class="col-md-12 col-sm-12 mt-4 pt-4 text-center animate__backInDown animation">
+            <div class="col-md-12 col-sm-12 mt-4 pt-4 text-center animate__animated animate__backInDown animation">
                 <h1 class="text-center text-white main-heading">Coming
                     Soon!</h1>
                 <h3 class="text-white text-center sub-heading mb-4">Our
