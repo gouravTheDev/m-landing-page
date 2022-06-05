@@ -19,7 +19,208 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link rel="stylesheet" href="landing.css">
+    <!-- <link rel="stylesheet" href="landing.css"> -->
+    <style>
+        @font-face {
+            font-family: Vonique64;
+            src: url(fonts/vonique/Vonique-64-bold.ttf);
+        }
+
+        @font-face {
+            font-family: morelinia;
+            src: url(fonts/morelinia/Morelinia.ttf);
+        }
+
+        @font-face {
+            font-family: montserat;
+            src: url(fonts/montserat/MontserratAlternates-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: ubuntu;
+            src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+        }
+
+        body {
+            background-image: url("images/bgimg.jpg");
+            /* height: 100%;
+  min-height: 100vh; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            font-family: "ubuntu";
+        }
+
+        .animation {
+            animation-duration: 0.9s;
+        }
+
+        .animation2 {
+            animation-duration: 1.5s;
+        }
+
+        .btn-gradient-primary {
+            background: -webkit-gradient(linear,
+                    left top,
+                    right top,
+                    from(#da8cff),
+                    to(#9a55ff));
+            background: linear-gradient(to right, #da8cff, #9a55ff);
+            border: 0;
+            -webkit-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+            color: #fff;
+        }
+
+        .camera-img {
+            margin-top: 25px;
+            height: 80%;
+            width: 220px;
+        }
+
+        .sub-heading {
+            font-family: "morelinia", cursive;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+        .navbar-brand {
+            display: none;
+        }
+
+        .border-radius {
+            border-right: 1.5px solid #fff;
+            padding-right: 20px;
+            display: block;
+        }
+
+        .social-section {
+            position: absolute;
+            right: 50px;
+            top: 200px;
+        }
+
+        .social-section-mobile {
+            display: none;
+        }
+
+        .main-section {
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            body {
+                background-image: url("images/mob-bg.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #000;
+                font-family: "ubuntu";
+            }
+
+            .camera-img {
+                margin-top: 2px;
+                height: 80%;
+                width: 200px;
+            }
+
+            .social-section-mobile {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-top: 40px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .sub-heading {
+                font-family: "morelinia", cursive;
+                font-size: 40px;
+                margin-top: 30px;
+                font-weight: bold;
+            }
+
+            .navbar-brand {
+                display: block;
+            }
+
+            .border-radius {
+                border-right: 0px;
+                padding-right: 20px;
+            }
+
+            .social-section {
+                display: none;
+            }
+
+            .main-section {
+                padding-top: 20px;
+            }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .glow {
+            font-size: 25px;
+            color: #fff;
+            /* text-align: center; */
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+                    0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+                    0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+
+        .navbar-menus {
+            padding-left: 150px;
+        }
+
+        .btn-cus {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .card-cus {
+            border: 2px solid #fff;
+            border-radius: 20px;
+        }
+
+        .main-heading {
+            font-family: "Vonique64", bold;
+            font-weight: bold;
+        }
+
+        .social-icon-btn {
+            background: rgb(54, 54, 54);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            padding: 5px;
+            padding-top: 4px;
+        }
+
+        .social-icon {
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -65,8 +266,8 @@
         $mailMsg .= "<br>Thank you. <br> Team Magic Moments Photography";
 
         // echo $mailMsg;
-        // sendMail("magicmomentsphotography.in@gmail.com", "Date Availability Enquiry", $mailMsg);
-        sendMail("chatterjeegouravking@gmail.com", "Date Availability Enquiry", $mailMsg);
+        sendMail("magicmomentsphotography.in@gmail.com", "Date Availability Enquiry", $mailMsg);
+        // sendMail("chatterjeegouravking@gmail.com", "Date Availability Enquiry", $mailMsg);
         $mailSent = true;
     }
     ?>
