@@ -1,3 +1,8 @@
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +23,53 @@
 </head>
 
 <body>
+    <?php
+    require "sendmail.php";
+    $mailSent = false;
+    if (isset($_POST['submitDateForm'])) {
+        $name = $_POST['name'];
+        $eventType = $_POST['eventType'];
+        $eventDate = $_POST['eventDate'];
+        $phone = $_POST['phone'];
+        $city = $_POST['city'];
+        $notes = isset($_POST['notes']) ? $_POST['notes'] : '';
+
+        $mailMsg = "Date availability check form has been submitted. The details are mentioned below. <br>";
+        $mailMsg .= "<table>";
+        $mailMsg .= "<tr>
+                        <th>Name:- </th>
+                        <td>" . $name . "</td>
+                    </tr>";
+        $mailMsg .= "<tr>
+                    <th>Phone:- </th>
+                    <td>" . $phone . "</td>
+                </tr>";
+        $mailMsg .= "<tr>
+                        <th>Event Type:- </th>
+                        <td>" . $eventType . "</td>
+                    </tr>";
+        $mailMsg .= "<tr>
+                    <th>Event Date:- </th>
+                    <td>" . $eventDate . "</td>
+                </tr>";
+        $mailMsg .= "<tr>
+                <th>City:- </th>
+                <td>" . $city . "</td>
+            </tr>";
+
+        $mailMsg .= "<tr>
+            <th>Notes:- </th>
+            <td>" . $notes . "</td>
+        </tr>";
+        $mailMsg .= "</table>";
+        $mailMsg .= "<br>Thank you. <br> Team Magic Moments Photography";
+
+        // echo $mailMsg;
+        sendMail("magicmomentsphotography.in@gmail.com", "Date Availability Enquiry", $mailMsg);
+        // sendMail("chatterjeegouravking@gmail.com", "Date Availability Enquiry", $mailMsg);
+        $mailSent = true;
+    }
+    ?>
     <div class="container pt-0 mt-0 pb-4 mb-4">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"></a>
@@ -80,53 +132,59 @@
                     MOMENTS <br>PHOTOGRAPHY</h1>
                 <h3 class="text-white text-center mb-4 sub-heading pb-4 animate__animated animate__backInDown animation">
                     Begin your moments with us!</h3>
+                <?php
+                if ($mailSent) { ?>
+                    <h6>Your enquiry has been submitted. Our team member will reach out to you shortly.</h6>
+                <?php }
+                ?>
                 <div class="card-transparent card-cus px-0 py-0 mt-4 shadow animate__animated animate__bounceInLeft animation">
                     <div class="card-body px-2 py-3">
                         <h5 class="text-center text-white font-weight-bold">Date Availability Check</h5>
-                        <form class="mt-4">
+                        <form class="mt-4" method="POST">
+                            <input type="hidden" name="submitDateForm" value="11">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" class="form-control" placeholder="Name" name="name" required>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <select class="form-control" id="">
+                                        <select class="form-control" id="" name="eventType" required>
                                             <option value="">Event Type</option>
-                                            <option value="">Wedding Reception</option>
-                                            <option value="">Reception</option>
-                                            <option value="">Birthday</option>
-                                            <option value="">Anniversary</option>
-                                            <option value="">puberty ceremony</option>
-                                            <option value="">Portfolio shoot</option>
-                                            <option value="">Family Get Together</option>
-                                            <option value="">Corporate Meetings</option>
-                                            <option value="">Product Shoot</option>
+                                            <option value="Wedding Reception">Wedding Reception</option>
+                                            <option value="Reception">Reception</option>
+                                            <option value="Birthday">Birthday</option>
+                                            <option value="Anniversary">Anniversary</option>
+                                            <option value="Puberty Ceremony">Puberty Ceremony</option>
+                                            <option value="Portfolio Shoot">Portfolio Shoot</option>
+                                            <option value="Family Get Together">Family Get Together</option>
+                                            <option value="Corporate Meetings">Corporate Meetings</option>
+                                            <option value="Product Shoot">Product Shoot</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="date" class="form-control date" placeholder="Pick the Event date">
+                                        <input type="date" class="form-control date" name="eventDate" required placeholder="Event date">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" placeholder="Enter Phone Number">
+                                        <input type="number" class="form-control" name="phone" required placeholder="Phone Number">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Enter City">
+                                        <input type="text" class="form-control" name="city" required placeholder="City">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Additional Notes if any"></textarea>
+                                <textarea id="" cols="30" rows="3" class="form-control" name="notes" placeholder="Additional Notes if any"></textarea>
                             </div>
                             <div class="form-group text-center mt-4 pb-0 mb-0">
-                                <button type="button" class="btn btn-sm">Check</button>
+                                <button type="submit" class="btn btn-sm">Check</button>
                             </div>
                         </form>
                     </div>
