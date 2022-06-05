@@ -348,7 +348,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <input type="date" class="form-control date" name="eventDate" required placeholder="Event date">
+                                        <input type="date" class="form-control" name="eventDate" required placeholder="Event date">
                                     </div>
                                 </div>
                             </div>
