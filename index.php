@@ -65,8 +65,8 @@
         $mailMsg .= "<br>Thank you. <br> Team Magic Moments Photography";
 
         // echo $mailMsg;
-        sendMail("magicmomentsphotography.in@gmail.com", "Date Availability Enquiry", $mailMsg);
-        // sendMail("chatterjeegouravking@gmail.com", "Date Availability Enquiry", $mailMsg);
+        // sendMail("magicmomentsphotography.in@gmail.com", "Date Availability Enquiry", $mailMsg);
+        sendMail("chatterjeegouravking@gmail.com", "Date Availability Enquiry", $mailMsg);
         $mailSent = true;
     }
     ?>
@@ -108,27 +108,10 @@
                 </div>
             </div>
         </nav>
-        <div class="social-section">
-            <div>
-                <a href="" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
-                    <i class="mdi mdi-facebook social-icon"></i>
-                </a>
-            </div>
-            <div>
-                <a href="" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
-                    <i class="mdi mdi-google social-icon"></i>
-                </a>
-            </div>
-            <div>
-                <a href="" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
-                    <i class="mdi mdi-whatsapp social-icon"></i>
-                </a>
-            </div>
-        </div>
 
         <div class="row mt-4">
-            <div class="col-md-6 col-sm-12 mt-4 pt-4">
-                <h1 class="text-center text-white main-heading mt-4 animate__animated animate__backInUp animation">MAGIC
+            <div class="col-md-6 col-sm-12 main-section">
+                <h1 class="text-center text-white main-heading animate__animated animate__backInUp animation">MAGIC
                     MOMENTS <br>PHOTOGRAPHY</h1>
                 <h3 class="text-white text-center mb-4 sub-heading pb-4 animate__animated animate__backInDown animation">
                     Begin your moments with us!</h3>
@@ -138,7 +121,7 @@
                 <?php }
                 ?>
                 <div class="card-transparent card-cus px-0 py-0 mt-4 shadow animate__animated animate__bounceInLeft animation">
-                    <div class="card-body px-2 py-3">
+                    <div class="card-body px-2 pt-2 pb-0">
                         <h5 class="text-center text-white font-weight-bold">Date Availability Check</h5>
                         <form class="mt-4" method="POST">
                             <input type="hidden" name="submitDateForm" value="11">
@@ -184,10 +167,44 @@
                                 <textarea id="" cols="30" rows="3" class="form-control" name="notes" placeholder="Additional Notes if any"></textarea>
                             </div>
                             <div class="form-group text-center mt-4 pb-0 mb-0">
-                                <button type="submit" class="btn btn-sm">Check</button>
+                                <button type="submit" class="btn btn-sm mb-0 pb-0">Check</button>
                             </div>
                         </form>
                     </div>
+                </div>
+                <div class="social-section-mobile">
+                    <div>
+                        <a href="https://www.instagram.com/magicmomentsphotography.in/" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                            <i class="mdi mdi-instagram social-icon"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://maps.app.goo.gl/YcXMs9222qoniLka8" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                            <i class="mdi mdi-google social-icon"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://wa.me/7540045005" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                            <i class="mdi mdi-whatsapp social-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-section">
+                <div>
+                    <a href="https://www.instagram.com/magicmomentsphotography.in/" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                        <i class="mdi mdi-instagram social-icon"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://maps.app.goo.gl/YcXMs9222qoniLka8" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                        <i class="mdi mdi-google social-icon"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://wa.me/7540045005" class="btn mr-4 social-icon-btn mb-4" style="color: #fff">
+                        <i class="mdi mdi-whatsapp social-icon"></i>
+                    </a>
                 </div>
             </div>
         </div>
