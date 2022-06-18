@@ -334,6 +334,7 @@
                                     <div class="form-group">
                                         <select class="form-control" id="" name="eventType" required>
                                             <option value="">Event Type</option>
+                                            <option value="Engagement">Engagement</option>
                                             <option value="Wedding Reception">Wedding Reception</option>
                                             <option value="Reception">Reception</option>
                                             <option value="Birthday">Birthday</option>
