@@ -54,7 +54,7 @@
                 <h1 class="text-center text-white main-heading">Coming
                     Soon!</h1>
                 <h3 class="text-white text-center sub-heading mb-4">Our
-                    our tech team is working to launch on 17th July 2022</h3>
+                    our tech team is working to launch on 28th August 2022</h3>
                 <a href="/" class="text-white mt-4">Go to home</a>
             </div>
         </div>
